@@ -21,9 +21,9 @@ public class shortUrlIntercept implements HandlerInterceptor {
 //        System.out.println("==================="+requestURL1);
 //        response.sendRedirect();
         if (url[3].length()==6){
-            Url url1=shortUrlService.getByShort(url[3]);
-            response.sendRedirect(url1.getLong_url());
-            return false;
+//            Url url1=shortUrlService.getByShort(url[3]);
+//            response.sendRedirect(url1.getLong_url());
+            return true;
         }
         else {
             return true;

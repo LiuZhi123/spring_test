@@ -36,14 +36,14 @@ public class TestController {
     private shortUrlUtil shortUrl1;
     @Resource
     private shortUrlService shortUrlService;
-    @NacosValue(value = "${local:false}",autoRefreshed = true)
-    private String local;
-    @Value("${nacos.config.server-addr}")
+//    @NacosValue(value = "${local:false}",autoRefreshed = true)
+//    private String local;
+//    @Value("${nacos.config.server-addr}")
     private String name;
-    @RequestMapping(value = "/get",method = RequestMethod.GET)
-    public String get(){
-        return local;
-    }
+//    @RequestMapping(value = "/get",method = RequestMethod.GET)
+//    public String get(){
+//        return local;
+//    }
 //    @RequestMapping("/send")
 //    public void send(@RequestParam String message1) throws InterruptedException, RemotingException, MQClientException, MQBrokerException {
 //        List<SendResult> list = new ArrayList<SendResult>();
@@ -65,5 +65,9 @@ public class TestController {
         url1.setShort_url(urls[0]);
         shortUrlService.insert(url1);
         return urls[0];
+    }
+    @RequestMapping("/provider")
+    public String test(){
+        return "success";
     }
 }

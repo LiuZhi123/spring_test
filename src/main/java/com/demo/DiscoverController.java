@@ -17,11 +17,11 @@ import java.util.List;
 @RequestMapping("/discover")
 @ResponseBody
 public class DiscoverController {
-    @NacosInjected
-    private NamingService namingService;
-
-    @RequestMapping(value = "get",method = RequestMethod.GET)
-    public List<Instance> Discover(@RequestParam String serviceName) throws NacosException {
-        return namingService.getAllInstances(serviceName);
-    }
+//    @NacosInjected
+//    private NamingService namingService;
+//
+//    @RequestMapping(value = "get",method = RequestMethod.GET)
+//    public List<Instance> Discover(@RequestParam String serviceName) throws NacosException {
+//        return namingService.getAllInstances(serviceName);
+//    }
 }
